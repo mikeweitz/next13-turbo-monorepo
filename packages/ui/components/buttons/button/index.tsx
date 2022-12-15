@@ -4,7 +4,6 @@ import { ButtonHTMLAttributes, ReactNode } from 'react';
 import styles from './styles.module.scss';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: ReactNode;
   className?: string;
 }
 
