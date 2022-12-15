@@ -1,0 +1,66 @@
+/* Spacing */
+$spacing--4: 1px;
+$spacing--3: 2px;
+$spacing--2: 3px;
+$spacing--1: 5px;
+$spacing-0: 8px;
+$spacing-00: 10px;
+$spacing-01: 12px;
+$spacing-02: 14px;
+$spacing-03: 15px;
+$spacing-1: 16px;
+$spacing-2: 20px;
+$spacing-3: 25px;
+$spacing-4: 30px;
+$spacing-5: 34px;
+$spacing-6: 40px;
+$spacing-07: 50px;
+$spacing-7: 55px;
+$spacing-08: 60px;
+$spacing-8: 70px;
+$spacing-9: 75px;
+$spacing-10: 80px;
+$spacing-11: 100px;
+$spacing-12: 110px;
+$spacing-13: 120px;
+$spacing-14: 130px;
+$spacing-15: 140px;
+$spacing-16: 150px;
+$spacing-17: 160px;
+$spacing-18: 170px;
+$spacing-19: 180px;
+$spacing-20: 200px;
+$spacing-21: 220px;
+
+/* content spacing */
+$cta-min-width-desktop: 200px;
+
+/* Layout spacing */
+$w-content-max-1: 920px;
+$w-inline-global-nav: 110px;
+$w-inline-main-content: calc(100vw - 110px);
+
+/* Product spacing */
+$ingredient-card-h: 140px;
+$ingredient-card-h-lg: 170px;
+$ingredient-card-w-lg: 140px;
+$ingredient-option-w: 160px;
+$dropdown-item-w: 320px;
+
+/* 
+ *  Spacing that scales down on smaller screens 
+ *  so places with a LARGE amount of padding don't look rediculous
+ *  ( Currently just being used on Checkout / Cart page )
+ * 
+ *  Note had to do this wierd stuff with #{'...'} because of issue with node-sass
+ *  https://github.com/sass/node-sass/issues/2815#issuecomment-574038619
+ *
+ *  Note: The % is based off the element width, not screen width.
+ */
+$responsive-spacing-25: #{'min( 25px, 4.5%)'};
+$responsive-spacing-30: #{'min( 30px, 5%)'};
+$responsive-spacing-40: #{'min( 40px, 6%)'};
+$responsive-spacing-50: #{'min( 50px, 7%)'};
+$responsive-spacing-60: #{'min( 60px, 8%)'};
+$responsive-spacing-80: #{'min( 80px, 9%)'};
+$responsive-spacing-110: #{'min( 110px, 10%)'};

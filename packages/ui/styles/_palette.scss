@@ -1,0 +1,62 @@
+$brand-color: #501098;
+$brand-color-dark: #3c1c86;
+$brand-color-light: #71009f;
+$brand-color-light-1: #9a23f8;
+$dark-color: #000;
+$dark-color-alpha: rgba(0, 0, 0, 0.65);
+$dark-color-alpha-1: rgba(0, 0, 0, 0.5);
+$dark-color-alpha-2: rgba(0, 0, 0, 0.25);
+$dark-color-alpha-3: rgba(0, 0, 0, 0.05);
+$dark-color-2: #201D1C;
+$light-color: #fff;
+$light-color-2: #fbfaf7;
+$loud-color: #ef2962;
+$loud-color-hover: #e62c61;
+$loud-color-1: #e7425f;
+$loud-color-outline: #ea42d1;
+$loud-color-2: #f07ade;
+$neutral-color: #f2f2f2;
+$neutral-color-1: #dedede;
+$neutral-color-2: #b6b6b6;
+$neutral-color-3: #7d7d7d; // @deprecated due to ADA insufficient contrast, use neutral-color-4 instead
+$neutral-color-4: #565656;
+$neutral-color-5: #e7e7e7;
+$neutral-color-6: #585858;
+$neutral-color-7: #f7f7f7;
+$neutral-color-8: #c6c6c6;
+$neutral-color-9: #ededed;
+$neutral-color-10: #979797;
+$neutral-color-11: #d9d9d9;
+$neutral-color-12: #707070;
+$neutral-color-13: #b9b9b9;
+$neutral-color-14: #ebebeb;
+$primary-color: #5cb8b2; // @TODO EC-6264 ADA insufficient contrast
+$primary-color-1: #00788a; // More contrast against white
+$root-color: $dark-color;
+$secondary-color: $loud-color;
+$secondary-disabled-color: lighten(
+    $brand-color,
+    50%
+); //Not an approved color by UI/UX, do Not use outside of PDP/CLP
+
+$cravings-pass-brand-color: #6003e6;
+$cravings-pass-cta-color: #ff1a88;
+
+$loyalty-color-1: #eb9335;
+$loyalty-color-3: #79747b;
+$loyalty-color-4: #7a2283;
+$loyalty-color-5: #38096c;
+$loyalty-color-6: #e2006c;
+$loyalty-color-7: #38373a;
+
+$banner-emergency: #fee101;
+$banner-maintenance: #ff8a2d;
+
+/* Gradients */
+$gradient-menu-color-end: $loud-color;
+$gradient-menu-color-start: #722182;
+
+/* CXO - Cart and Checkout Redesign palette */
+$cxo-neutral-color-1: #757575;
+/* Contact-us Form-Validation */
+$error-color: #d60068;

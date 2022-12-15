@@ -1,0 +1,86 @@
+@import '../borders';
+@import '../fonts';
+@import '../palette';
+@import '../spacing';
+
+@mixin base-button {
+    align-items: center;
+    border-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+// Deprecated - use base-button, standard-button, standard-button-override, or themable-button.
+@mixin button {
+    align-items: center;
+    display: flex;
+    font-family: $ff-interstate-bold;
+    font-size: $fs-0;
+    justify-content: center;
+    min-height: $spacing-6;
+    width: 100%;
+
+    svg {
+        height: 1.2em;
+        margin-right: $spacing--1;
+        width: 1.2em;
+
+        &.flipped {
+            transform: scaleX(-1);
+        }
+    }
+
+    @media screen and (min-width: 640px) {
+        font-size: $fs-1;
+    }
+}
+
+// Deprecated - use base-button, standard-button, standard-button-override, or themable-button.
+@mixin secondary-button {
+    @include button;
+    border: 0;
+    color: $light-color;
+
+    &:hover {
+        background-color: $loud-color-hover;
+    }
+}
+
+@mixin standard-button {
+    @include base-button;
+    border-radius: $br--6;
+    font-family: $ff-interstate-bold;
+    font-size: $fs-1;
+    min-height: $spacing-6;
+    padding: $spacing-1 $spacing-00;
+    width: 100%;
+
+    &:hover:not([disabled]) {
+        opacity: 0.9;
+    }
+}
+
+// Sizes by contents - good for iconic buttons.
+@mixin standard-button-override {
+    min-height: auto;
+    width: auto;
+}
+
+@mixin themable-button {
+    @include standard-button;
+    border: $bw-1 solid;
+
+    &:not(.inverse) {
+        color: $light-color;
+    }
+
+    &.inverse {
+        background-color: transparent;
+        border-color: currentColor;
+    }
+
+    &.no-border {
+        border-color: transparent;
+    }
+}

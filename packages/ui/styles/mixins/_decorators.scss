@@ -1,0 +1,32 @@
+@import 'spacing';
+
+@mixin outline($color, $spacing) {
+    filter: drop-shadow($spacing $spacing 0 $color)
+        drop-shadow(-#{$spacing} #{$spacing} 0 $color)
+        drop-shadow(#{$spacing} -#{$spacing} 0 $color)
+        drop-shadow(-#{$spacing} -#{$spacing} 0 $color);
+}
+
+@mixin underline($color, $height-sm, $height-lg) {
+    background: linear-gradient(transparent 0, $color 0);
+    background-position: 0 70%;
+    background-repeat: repeat-x;
+    background-size: $spacing--2 $height-sm;
+    display: inline;
+
+    @media screen and (min-width: 640px) {
+        background-size: $spacing--2 $height-lg;
+    }
+}
+
+@mixin underline-title {
+    @include underline($primary-color, $spacing--1, $spacing-0);
+    font-family: $ff-brandon-grotesque-web-black;
+    font-size: $fs-6;
+    text-transform: uppercase;
+    line-height: $lh-2;
+
+    @media screen and (min-width: 640px) {
+        font-size: $fs-9;
+    }
+}

@@ -1,0 +1,227 @@
+@import 'bp';
+@import 'fonts';
+@import 'palette';
+@import 'spacing';
+
+@mixin crisp-edges {
+    image-rendering: -moz-crisp-edges;
+    /* Firefox */
+    image-rendering: -o-crisp-edges;
+    /* Opera */
+    image-rendering: -webkit-optimize-contrast;
+    /* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+    /* IE (non-standard property) */
+}
+
+@mixin placeholder {
+    ::-webkit-input-placeholder {
+        @content;
+    }
+
+    :-moz-placeholder {
+        @content;
+    }
+
+    ::-moz-placeholder {
+        @content;
+    }
+
+    :-ms-input-placeholder {
+        @content;
+    }
+}
+
+%center {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%nobr {
+    white-space: nowrap;
+}
+
+%hide-scrollbar {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+
+    &::-webkit-scrollbar {
+        display: none;
+        width: 0;
+    }
+}
+
+@mixin hidden-label {
+    height: 0;
+    overflow: hidden;
+    width: $spacing--4;
+}
+
+@mixin show-label {
+    height: initial;
+    overflow: initial;
+    width: initial;
+}
+
+@mixin error-modal {
+    $dead-taco-max-image-width: 123px;
+    $error-modal-max-cta-width: 240px;
+    $error-modal-width: 374px;
+
+    .modal > div {
+        max-width: 95%;
+        text-align: center;
+        width: $error-modal-width;
+
+        .error-modal-image {
+            margin: $spacing-3 auto $spacing-2;
+            max-width: $dead-taco-max-image-width;
+        }
+
+        .error-modal-title {
+            font-size: $fs-5;
+            margin-bottom: $spacing-2;
+            margin-top: $spacing-00;
+            text-transform: uppercase;
+        }
+
+        .error-modal-message {
+            color: $loyalty-color-7;
+            font-family: $ff-interstate-light;
+            font-size: $fs-2;
+            margin-bottom: $spacing-1;
+            overflow: auto;
+            padding: 0 $spacing-2;
+
+            /*  Currently we don't display any super long error messages 
+                but IF we did, we would want to set a max-height so text is scrollable 
+            */
+            /* max-height: 110px; 
+            */
+        }
+
+        .error-modal-message2 {
+            color: $loyalty-color-7;
+            font-family: $ff-interstate-light;
+            font-size: $fs-2;
+            margin-bottom: 0;
+            overflow: auto;
+            padding: 0 $spacing-2;
+        }
+
+        .error-modal-item-container {
+            margin-bottom: $spacing-2;
+        }
+
+        .error-modal-item {
+            font-family: $ff-interstate-bold;
+            font-size: $fs-2;
+            margin: 0 auto $spacing--1;
+        }
+
+        .error-modal-button {
+            font-family: $ff-interstate-regular;
+            font-size: $fs-1;
+            margin: 0 auto $spacing-00;
+            max-width: $error-modal-max-cta-width;
+            padding: $spacing-1;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+}
+
+// display ellipsis ... when text is longer than X lines.
+@mixin line-clamp($number-of-lines: 1) {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $number-of-lines;
+}
+
+// Note: For all these ADA focus states ( Designer: Matthew Cogswell )
+
+@mixin ada-input-focus {
+    // Easy to see ADA compliant outline when focused
+    // based on 'Final solution' here: https://dockyard.com/blog/2020/04/28/designing-for-accessibility-focus-states
+    // however unlike the `Final solution` this is just 1 border color for all inputs.
+    outline: $spacing--4 solid $brand-color-light-1; // Violet
+    outline-offset: $spacing--2;
+}
+
+$cropImageSize: 240px;
+$imageleft: -88px;
+
+@mixin ada-dropdown-hover {
+    // hover state only needed for desktop
+    @media screen and (min-width: $bp-sm) {
+        svg {
+            // For Purchase credit card
+            outline: $spacing--3 solid $light-color;
+        }
+
+        &:hover:not(.focused) {
+            background: $neutral-color; // we use same light gray color as our background? wierd...
+        }
+        &.focused {
+            background: $brand-color; // Deep Purple Background
+            &,
+            * {
+                color: $light-color !important; // All Text White!
+            }
+        }
+        &.focused,
+        &:hover {
+            transition: 0.11s ease-in; // show fast animation
+        }
+        // Change Square image with white background to Circular Image:
+        > img {
+            // Using border-radius to make image a CIRCLE instead of SQUARE.
+            border-radius: $spacing-20;
+            // we also want to crop image too reduce amount of white space around image
+            // food is circle in center 221 by 221 ( 24px white all sides - we want to crop out)
+            // only way I know to crop a square image is using `object-fit: none`, then scale it down
+            height: $cropImageSize;
+            left: $imageleft;
+            object-fit: none;
+            position: absolute;
+            transform: scale(0.25);
+            width: $cropImageSize;
+            & + div {
+                padding-left: $spacing-9;
+            }
+        }
+    }
+}
+
+// DOM structure Example:
+// <label>          <-- add '@include ada-compliant-custom-input-label;` here
+//   <input />      <-- opacity: 0 so hidden but still can be focused by tab / clicking label
+//   <div>...</div> <-- custom input styled based on <input> :focus state
+// </label>
+@mixin ada-compliant-custom-input-label {
+    input {
+        // We want to hide original input and show a custom input... so using 'opacity 0'
+        // instead of 'visibility: hidden' or 'display: none' so that input can be tabbed to.
+        opacity: 0;
+        &:focus + * {
+            @include ada-input-focus;
+        }
+    }
+}
+
+@mixin video-content {
+    height: 100%;
+    width: 100%;
+}
+
+@mixin video-position {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}

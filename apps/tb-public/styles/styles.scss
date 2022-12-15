@@ -1,0 +1,56 @@
+@use '@tbweb/public/components/date-time/styles.module.scss' as dateTime;
+
+@import '@tbweb/ui/styles/fonts';
+@import '@tbweb/ui/styles/spacing';
+@import '@tbweb/ui/styles/palette';
+
+// Temporary style override until we use MenuSvgTiles component and to not impact other microsites
+@media screen and (max-width: 370px) {
+    [class*='tiles___'] [class*='link___'] a {
+        display: flex;
+        flex-direction: column;
+        min-height: 110px;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    [class*='tiles___'] [class*='link___'] a {
+        display: flex;
+        flex-direction: column;
+        min-height: 169px;
+    }
+}
+
+@media screen and (min-width: 780px), screen and (max-width: 370px) {
+    [class*='tiles___']
+        [class*='link___']
+        [class*='asset___']
+        + [class*='label___'] {
+        line-height: $lh-1;
+        padding: 0;
+    }
+}
+
+// DatePicker styling pulled from
+// ./components/container/date-time/styles.module.scss
+// https://www.npmjs.com/package/react-date-picker
+// @todo replace this styling with a better implementation
+:global {
+    .react-date-picker__wrapper {
+        background-color: $light-color;
+        height: dateTime.$date-picker-height;
+    }
+
+    .react-date-picker {
+        padding-top: $spacing--1;
+    }
+
+    .react-date-picker__calendar.react-date-picker__calendar--open {
+        bottom: initial !important;
+        top: 100% !important;
+    }
+
+    .react-calendar {
+        background-color: $light-color !important;
+    }
+}

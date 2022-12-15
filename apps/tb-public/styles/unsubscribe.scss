@@ -1,0 +1,31 @@
+@import 'spacing';
+@import 'palette';
+
+.header {
+    align-items: flex-end;
+    background-color: $unsubscribe-color;
+    display: flex;
+    height: $spacing-10;
+    justify-content: center;
+    width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+    .header {
+        height: unset;
+        left: $spacing-07;
+        position: absolute;
+        top: $spacing-2;
+        width: fit-content;
+    }
+}
+
+.footer {
+    background-color: $unsubscribe-color;
+    color: $light-color;
+    padding: 0 $spacing-6 $spacing-6;
+
+    hr {
+        display: none;
+    }
+}

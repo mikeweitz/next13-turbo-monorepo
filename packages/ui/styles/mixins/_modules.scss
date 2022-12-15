@@ -1,0 +1,276 @@
+@import 'mixins/buttons';
+@import 'fonts';
+@import 'palette';
+@import 'spacing';
+
+/**
+ * module general rules:
+ * main content column box max-width: 920px
+ * padded down to 840px available content space
+ *
+ */
+
+$font-size-sub-heading: 0.57em;
+$font-size-sub: 0.67em;
+$font-size-sub-legal: 0.9em;
+
+@mixin standard-module {
+    @include webpage-content-module;
+    color: $dark-color;
+    width: 100%;
+
+    section {
+        justify-content: center;
+        padding: $spacing-08 $spacing-1;
+
+        > div {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 100%;
+
+            p {
+                margin: 0 0 $spacing-1;
+            }
+        }
+    }
+
+    footer {
+        color: $neutral-color-6;
+    }
+
+    @media screen and (min-width: 640px) {
+        section {
+            padding: $spacing-6 $spacing-6;
+
+            > div p {
+                margin-bottom: $spacing-2;
+            }
+        }
+    }
+}
+
+@mixin standard-module-gtamerica {
+    section {
+        font-family: $ff-gt-america-standard-regular;
+
+        h1,
+        h2 {
+            font-family: $ff-gt-america-expanded-black;
+        }
+
+        b,
+        strong {
+            font-family: $ff-gt-america-standard-bold;
+        }
+
+        h3 {
+            font-family: $ff-gt-america-compressed-black;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@mixin webpage-content-module {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    line-height: $lh-2;
+    overflow: hidden;
+    position: relative;
+
+    > img,
+    > picture {
+        @include webpage-content-background;
+    }
+
+    section {
+        @include webpage-content-section;
+
+        h1 {
+            @include hero-title;
+        }
+
+        h2 {
+            @include module-title;
+        }
+
+        strong {
+            @include module-subtitle;
+        }
+
+        h2 + strong {
+            margin-top: -$spacing-0;
+        }
+
+        h3 {
+            @include module-child-item-title;
+        }
+
+        ol,
+        ul {
+            list-style: initial;
+            margin: $spacing-0 $spacing-3;
+            padding: 0;
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        li {
+            margin: $spacing-0 $spacing-3;
+        }
+
+        b,
+        strong {
+            font-family: $ff-interstate-bold;
+        }
+
+        blockquote {
+            background-color: $dark-color-alpha-3;
+            border-left: $spacing--2 solid $dark-color-alpha-2;
+            margin: $spacing-2 $spacing-3;
+            padding: $spacing-1 $spacing-3;
+        }
+
+        footer {
+            @include webpage-content-footer;
+        }
+
+        sub,
+        sup {
+            font-size: $font-size-sub;
+        }
+    }
+}
+
+@mixin webpage-content-footer {
+    display: flex;
+    flex-direction: column;
+    font-size: $fs--1;
+    margin-top: $spacing-6;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    sub,
+    sup {
+        font-size: $font-size-sub-legal;
+    }
+}
+
+@mixin webpage-content-section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: $fs-1;
+    height: 100%;
+    justify-content: flex-end;
+    margin: auto;
+    max-width: $w-content-max-1;
+    padding: $spacing-1;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+@mixin webpage-content-background {
+    position: absolute;
+    z-index: 0;
+}
+
+@mixin webpage-content-light-text {
+
+    img + section,
+    picture + section {
+        color: $light-color;
+    }
+}
+
+@mixin module-title {
+    font-family: $ff-brandon-grotesque-web-black;
+    font-size: $fs-6;
+    line-height: $lh-1;
+    margin-bottom: $spacing-2;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    img {
+        object-fit: unset;
+    }
+
+    sub,
+    sup {
+        font-size: $font-size-sub-heading;
+    }
+
+    @media screen and (min-width: 640px) {
+        font-size: $fs-7;
+    }
+}
+
+@mixin hero-title {
+    @include module-title;
+
+    @media screen and (min-width: 640px) {
+        text-align: left;
+    }
+}
+
+@mixin module-subtitle {
+    font-family: $ff-interstate-bold;
+    font-size: $fs-1;
+    margin-bottom: $spacing-2;
+    text-align: center;
+
+    sub,
+    sup {
+        font-size: $font-size-sub-heading;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@mixin module-child-item-title {
+    font-family: $ff-brandon-grotesque-web-black;
+    font-size: $fs-4;
+    line-height: $lh-1;
+    margin-bottom: $spacing-2;
+    text-align: center;
+    text-transform: uppercase;
+
+    a {
+        color: inherit;
+        display: block;
+    }
+}
+
+@mixin webpage-content-nav {
+    a {
+        display: flex;
+        flex-basis: 50%;
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase;
+
+        + a {
+            margin-left: $spacing-00;
+        }
+    }
+
+    @media screen and (min-width: 640px) {
+        margin: 0 auto;
+
+        a {
+            min-width: $cta-min-width-desktop;
+        }
+    }
+}

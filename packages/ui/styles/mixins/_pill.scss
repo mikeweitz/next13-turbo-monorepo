@@ -1,0 +1,36 @@
+@import 'borders';
+@import 'fonts';
+@import 'palette';
+@import 'spacing';
+
+@mixin base-pill {
+    align-items: center;
+    border-radius: $br-3;
+    display: inline-flex;
+    height: auto;
+    justify-content: center;
+    padding: $spacing-0 $spacing-01 $spacing-0;
+    width: auto;
+
+    &:focus-visible {
+        outline-color: currentColor;
+    }
+}
+
+@mixin themable-pill {
+    @include base-pill;
+
+    border: $bw-1 solid;
+
+    &:not(.inverse) {
+        color: $light-color;
+    }
+
+    &.inverse {
+        background-color: transparent;
+        border-color: currentColor;
+    }
+    &.no-border {
+        border-color: transparent;
+    }
+}

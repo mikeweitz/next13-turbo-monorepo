@@ -1,0 +1,224 @@
+@import 'env';
+
+@font-face {
+    font-display: swap;
+    font-family: 'BrandonGrotesqueWeb-Black';
+    src: url($asset-path+'/_static/shared/fonts/BrandonGrotesqueWeb-Black.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Glyphter';
+    src: url($asset-path+'/_static/shared/fonts/Glyphter.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GintoNordBold';
+    src: url($asset-path+'/_static/shared/fonts/GintoNordBold.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT-America-Compressed-Black';
+    src: url($asset-path+'/_static/shared/fonts/GT-America-Compressed-Black.woff2') format('woff2'),
+        url($asset-path+'/_static/shared/fonts/GT-America-Compressed-Black.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT-America-Compressed-Black';
+    src: url($asset-path+'/_static/shared/fonts/GT-America-Compressed-Black-Italic.woff2') format('woff2'),
+        url($asset-path+'/_static/shared/fonts/GT-America-Compressed-Black-Italic.woff') format('woff');
+    font-style: italic;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT-America-Expanded-Black';
+    src: url($asset-path+'/_static/shared/fonts/GT-America-Expanded-Black.woff2') format('woff2'),
+        url($asset-path+'/_static/shared/fonts/GT-America-Expanded-Black.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT-America-Expanded-Black';
+    src: url($asset-path+'/_static/shared/fonts/GT-America-Expanded-Black-Italic.woff2') format('woff2'),
+        url($asset-path+'/_static/shared/fonts/GT-America-Expanded-Black-Italic.woff') format('woff');
+    font-style: italic;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT-America-Mono-Bold';
+    src: url($asset-path+'/_static/shared/fonts/GT-America-Mono-Bold.woff2') format('woff2'),
+        url($asset-path+'/_static/shared/fonts/GT-America-Mono-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT-America-Mono-Bold';
+    src: url($asset-path+'/_static/shared/fonts/GT-America-Mono-Bold-Italic.woff2') format('woff2'),
+        url($asset-path+'/_static/shared/fonts/GT-America-Mono-Bold-Italic.woff') format('woff');
+    font-style: italic;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT-America-Mono-Medium';
+    src: url($asset-path+'/_static/shared/fonts/GT-America-Mono-Medium.woff2') format('woff2'),
+        url($asset-path+'/_static/shared/fonts/GT-America-Mono-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT-America-Mono-Medium';
+    src: url($asset-path+'/_static/shared/fonts/GT-America-Mono-Medium-Italic.woff2') format('woff2'),
+        url($asset-path+'/_static/shared/fonts/GT-America-Mono-Medium-Italic.woff') format('woff');
+    font-style: italic;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT-America-Standard-Bold';
+    src: url($asset-path+'/_static/shared/fonts/GT-America-Standard-Bold.woff2') format('woff2'),
+        url($asset-path+'/_static/shared/fonts/GT-America-Standard-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT-America-Standard-Bold';
+    src: url($asset-path+'/_static/shared/fonts/GT-America-Standard-Bold-Italic.woff2') format('woff2'),
+        url($asset-path+'/_static/shared/fonts/GT-America-Standard-Bold-Italic.woff') format('woff');
+    font-style: italic;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT-America-Standard-Medium';
+    src: url($asset-path+'/_static/shared/fonts/GT-America-Standard-Medium.woff2') format('woff2'),
+        url($asset-path+'/_static/shared/fonts/GT-America-Standard-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT-America-Standard-Medium';
+    src: url($asset-path+'/_static/shared/fonts/GT-America-Standard-Medium-Italic.woff2') format('woff2'),
+        url($asset-path+'/_static/shared/fonts/GT-America-Standard-Medium-Italic.woff') format('woff');
+    font-style: italic;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT-America-Standard-Regular';
+    src: url($asset-path+'/_static/shared/fonts/GT-America-Standard-Regular.woff2') format('woff2'),
+        url($asset-path+'/_static/shared/fonts/GT-America-Standard-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'GT-America-Standard-Regular';
+    src: url($asset-path+'/_static/shared/fonts/GT-America-Standard-Regular-Italic.woff2') format('woff2'),
+        url($asset-path+'/_static/shared/fonts/GT-America-Standard-Regular-Italic.woff') format('woff');
+    font-style: italic;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'InterstateBlack';
+    src: url($asset-path+'/_static/shared/fonts/InterstateBlack.woff2') format('woff2'),
+        url($asset-path+'/_static/shared/fonts/InterstateBlack.ttf') format('truetype');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'InterstateBold';
+    src: url($asset-path+'/_static/shared/fonts/InterstateBold.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'InterstateBoldCondensed';
+    src: url($asset-path+'/_static/shared/fonts/InterstateBoldCondensed.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'InterstateLight';
+    src: url($asset-path+'/_static/shared/fonts/InterstateLight.otf') format('opentype');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'InterstateRegular';
+    src: url($asset-path+'/_static/shared/fonts/InterstateRegular.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'InterstateRegularCondensed';
+    src: url($asset-path+'/_static/shared/fonts/InterstateRegularCondensed.woff') format('woff');
+}
+
+/* font-family */
+$ff-brandon-grotesque-web-black: BrandonGrotesqueWeb-Black, 'Arial Black', Arial, Helvetica, sans-serif;
+
+$ff-ginto-nord-bold: 'GintoNordBold', sans-serif;
+
+$ff-gt-america-compressed-black: 'GT-America-Compressed-Black', 'Arial Black', Arial, Helvetica, sans-serif;
+$ff-gt-america-expanded-black: 'GT-America-Expanded-Black', 'Arial Black', Arial, Helvetica, sans-serif;
+$ff-gt-america-standard-bold: 'GT-America-Standard-Bold', Arial, Helvetica, sans-serif;
+$ff-gt-america-standard-medium: 'GT-America-Standard-Medium', Arial, Helvetica, sans-serif;
+$ff-gt-america-standard-regular: 'GT-America-Standard-Regular', Arial, Helvetica, sans-serif;
+$ff-gt-america-mono-bold: 'GT-America-Mono-Bold', Arial, Helvetica, sans-serif;
+$ff-gt-america-mono-medium: 'GT-America-Mono-Medium', Arial, Helvetica, sans-serif;
+
+$ff-interstate-black: InterstateBlack, InterstateBold, Arial, Helvetica, sans-serif;
+$ff-interstate-bold-condensed: InterstateBoldCondensed, Arial, Helvetica, sans-serif;
+$ff-interstate-bold: InterstateBold, Arial, Helvetica, sans-serif;
+$ff-interstate-light: InterstateLight, Arial, Helvetica, sans-serif;
+$ff-interstate-regular-condensed: InterstateRegularCondensed, Arial, Helvetica, sans-serif;
+$ff-interstate-regular: InterstateRegular, Arial, Helvetica, sans-serif;
+
+/* font-size */
+$fs--4: 5px;
+$fs--3: 8px;
+$fs--2: 10px;
+$fs--1: 12px;
+$fs-0: 14px;
+$fs-1: 16px;
+$fs-2: 18px;
+$fs-3: 20px;
+$fs-4: 24px;
+$fs-5: 28px;
+$fs-05: 30px;
+$fs-6: 32px;
+$fs-06: 36px;
+$fs-7: 42px;
+$fs-07: 48px;
+$fs-08: 50px;
+$fs-8: 54px;
+$fs-9: 62px;
+$fs-10: 70px;
+$fs-11: 80px;
+$fs-012: 100px;
+$fs-12: 115px;
+$fs-em--3: 0.75em;
+$fs-em--2: 1em;
+$fs-em--1: 1.25em;
+$fs-em-0: 1.5em;
+$fs-em-1: 1.75em;
+$fs-em-2: 2em;
+$fs-em-5: 3em;
+
+$lh-01: 0.92;
+$lh-1: 1;
+$lh--1: 1.1;
+$lh-2: 1.2;
+$lh--3: 1.25;
+$lh-3: 1.5;
+$lh-4: 1.75;
+
+$ls-1: 0.05em;
+
+$fw-3: 300;

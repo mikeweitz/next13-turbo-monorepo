@@ -1,0 +1,47 @@
+@import '@tbweb/ui/styles/palette';
+@import '@tbweb/ui/styles/spacing';
+
+$date-picker-width: 170px;
+$date-picker-height: 40px;
+
+.date-time-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.time {
+    width: $date-picker-width;
+}
+
+.date-picker {
+    flex: 1;
+    padding-top: $spacing--1;
+    width: $date-picker-width;
+
+    :global {
+        .react-date-picker__wrapper {
+            background-color: $light-color;
+            height: $date-picker-height;
+        }
+
+        .react-date-picker {
+            padding-top: $spacing--1;
+        }
+
+        .react-date-picker__calendar.react-date-picker__calendar--open {
+            bottom: initial !important;
+            top: 100% !important;
+        }
+
+        .react-calendar {
+            background-color: $light-color !important;
+        }
+    }
+}
+
+.date-time {
+    flex: 1;
+    padding-left: $spacing-00;
+    padding-top: $spacing--1;
+    width: $date-picker-width;
+}

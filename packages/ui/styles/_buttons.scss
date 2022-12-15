@@ -1,0 +1,14 @@
+@import 'fonts';
+@import 'palette';
+@import 'spacing';
+
+@mixin secondary-button {
+    border: none;
+    color: $light-color;
+    font-family: $ff-interstate-bold;
+    font-size: $fs-2;
+    padding: $spacing-1;
+    &:hover {
+        background-color: $loud-color-hover;
+    }
+}

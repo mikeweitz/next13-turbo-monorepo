@@ -1,0 +1,79 @@
+@import '../../../styles/palette';
+
+.brand {
+    color: $brand-color;
+}
+
+.current {
+    color: currentColor;
+}
+
+.highlight {
+    color: $loud-color-outline;
+}
+
+.light {
+    color: $light-color;
+}
+
+.loud {
+    color: $loud-color;
+}
+
+.neutral {
+    color: $neutral-color-4;
+}
+
+.primary {
+    color: $brand-color;
+}
+
+.root {
+    color: $root-color;
+}
+
+.secondary {
+    color: $secondary-color;
+}
+
+.bg-brand {
+    background-color: $brand-color;
+}
+
+.bg-current {
+    background-color: currentColor;
+}
+
+.bg-highlight {
+    background-color: $loud-color-outline;
+}
+
+.bg-light {
+    background-color: $light-color;
+}
+
+.bg-loud {
+    background-color: $loud-color;
+}
+
+.bg-neutral {
+    background-color: $neutral-color-4;
+}
+
+.bg-primary {
+    background-color: $primary-color;
+}
+
+.bg-root {
+    background-color: $root-color;
+}
+
+// to find usages search: bg-${theme}
+.bg-secondary {
+    background-color: $brand-color;
+}
+
+.bg-secondary[disabled],
+.secondary[disabled] {
+    background-color: $neutral-color-3;
+}

@@ -1,0 +1,12 @@
+$bp-xs: 414px;
+$bp-sm: 640px;
+$bp-md: 780px;
+$bp-lg: 990px;
+$bp-xl: 1366px;
+$bp-xxl: 1920px;
+
+// This MR trying NOT to make any changes to breakpoints just layout: ECORD-2800
+// Next MR is breakpoint changes: ECORD-2552
+// but bare minimum I wanted to not show hamburger menu when side menu shown this MR
+$bp-hamburger-shown: 639px; // TODO will update my very next MR: ECORD-2552
+$bp-hamburger-hide: 640px; // TODO will update my very next MR: ECORD-2552

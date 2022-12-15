@@ -1,0 +1,46 @@
+@import 'fonts';
+@import 'palette';
+@import 'reset';
+
+/*
+ * Use only a HTML selectors for each definition.
+ */
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+}
+
+html {
+    min-height: 100%;
+}
+
+html,
+body,
+#__next {
+    height: 100%;
+}
+
+body {
+    flex: 1 1 100%;
+    font-family: $ff-interstate-regular;
+    font-size: $fs-0;
+    overflow: hidden;
+
+    &.asideOpen {
+        overscroll-behavior: none;
+    }
+}
+
+a {
+    color: $brand-color;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}

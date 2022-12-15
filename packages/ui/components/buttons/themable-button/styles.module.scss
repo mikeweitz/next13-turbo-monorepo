@@ -1,0 +1,14 @@
+@import '../../../styles/mixins/buttons';
+@import '../../../styles/mixins/dot-flashing';
+
+.button {
+    @include themable-button;
+}
+
+:global(.gtamerica) {
+    .button {
+        font-family: $ff-gt-america-mono-medium;
+    }
+}
+
+@include dot-flashing;

@@ -1,0 +1,24 @@
+{
+    "name": "@tb/monorepo",
+    "private": true,
+    "workspaces": [
+        "./apps/*",
+        "./packages/*"
+    ],
+    "engines": {
+        "node": "^14",
+        "npm": "^7"
+    },
+    "scripts": {
+        "build": "turbo run build",
+        "dev": "turbo run dev",
+        "lint": "turbo run lint",
+        "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    },
+    "devDependencies": {
+        "eslint": "^7.32.0",
+        "eslint-config-custom": "@tbweb/eslint-config-custom",
+        "prettier": "^2.5.1",
+        "turbo": "latest"
+    }
+}
