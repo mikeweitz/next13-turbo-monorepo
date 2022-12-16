@@ -17,9 +17,7 @@ export default function Products() {
         <a href='/'>Anchor Tag to '/'</a>
       </p>
       <p>
-        <Link href='/'>
-          <a href='/'>Link wrapped Anchor Tag to '/'</a>
-        </Link>
+        <Link href='/'>Link wrapped Anchor Tag to '/'</Link>
       </p>
     </div>
   );
