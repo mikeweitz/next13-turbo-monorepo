@@ -1,7 +1,8 @@
 module.exports = {
-  basePath: "/food",
+  basePath: '/food',
   reactStrictMode: true,
   experimental: {
-    transpilePackages: ["ui"],
+    transpilePackages: ['ui'],
+    outputFileTracingRoot: path.join(__dirname, '../../'),
   },
 };
