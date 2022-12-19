@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  output: 'standalone',
   basePath: '/food',
   reactStrictMode: true,
   experimental: {

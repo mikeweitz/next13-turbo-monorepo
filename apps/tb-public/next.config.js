@@ -3,6 +3,7 @@ const path = require('path');
 const { PRODUCTS_URL } = process.env;
 
 module.exports = {
+  output: 'standalone',
   reactStrictMode: true,
   experimental: {
     transpilePackages: ['ui'],
