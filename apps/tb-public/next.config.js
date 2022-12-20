@@ -7,7 +7,7 @@ module.exports = {
   reactStrictMode: true,
   experimental: {
     transpilePackages: ['ui'],
-
+    outputStandalone: true,
     // for AWS Amplify include base folder for output tracing
     outputFileTracingRoot: path.join(__dirname, '../../'),
 

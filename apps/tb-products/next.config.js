@@ -6,6 +6,7 @@ module.exports = {
   reactStrictMode: true,
   experimental: {
     transpilePackages: ['ui'],
+    outputStandalone: true,
     outputFileTracingRoot: path.join(__dirname, '../../'),
   },
 };
