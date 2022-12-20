@@ -1,7 +1,12 @@
+const path = require('path');
+
 module.exports = {
-  basePath: "/food",
+  output: 'standalone',
+  basePath: '/food',
   reactStrictMode: true,
   experimental: {
-    transpilePackages: ["ui"],
+    transpilePackages: ['ui'],
+    outputStandalone: true,
+    outputFileTracingRoot: path.join(__dirname, '../../'),
   },
 };

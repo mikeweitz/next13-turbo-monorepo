@@ -1,5 +1,5 @@
 {
-  "name": "docs",
+  "name": "@tbweb/products",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,7 @@
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ui": "@tbweb/ui"
+    "@tbweb/ui": "@tbweb/ui"
   },
   "devDependencies": {
     "@types/node": "^17.0.12",

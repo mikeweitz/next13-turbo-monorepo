@@ -17,10 +17,10 @@ export default function Products({ formattedDate }: { formattedDate: string }) {
         Loud Buton with props
       </ThemableButton>
       <p>
-        <a href='/'>Anchor Tag to '/'</a>
+        <a href='/'>Anchor Tag to &apos;/&apos;</a>
       </p>
       <p>
-        <Link href='../../'>Link tag to '/'</Link>
+        <Link href='/'>Link wrapped Anchor Tag to &apos;/&apos;</Link>
       </p>
     </div>
   );
