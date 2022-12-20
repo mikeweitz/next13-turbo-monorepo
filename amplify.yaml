@@ -1,0 +1,65 @@
+# Monorepo version
+version: 1
+applications:
+  - appRoot: apps/tb-public
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd ../../
+            - pwd
+            - npm ci
+        build:
+          commands:
+            - pwd
+            # wrapper around trubo build
+            - npm run build
+        postBuild:
+          commands:
+            # - npm prune --production #remove devDependencies
+            - cd apps/tb-public
+            - pwd
+            - cp -r .next/standalone/apps/tb-public/. .next/standalone
+            - rm -rf .next/standalone/apps/tb-public
+            - ls
+      artifacts:
+        files:
+          - '**/*'
+        # discard-paths: yes
+        baseDirectory: .next
+      cache:
+        paths:
+          - node_modules/**/*
+          - .next/cache/**/*
+          - ../../node_modules/**/*
+  - appRoot: apps/tb-products
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd ../../
+            - pwd
+            - npm ci
+        build:
+          commands:
+            - pwd
+            # wrapper around trubo build
+            - npm run build
+        postBuild:
+          commands:
+            # - npm prune --production
+            - cd apps/tb-products
+            - pwd
+            - cp -r .next/standalone/apps/tb-products/. .next/standalone
+            - rm -rf .next/standalone/apps/tb-products
+            - ls
+      artifacts:
+        files:
+          - '**/*'
+        # discard-paths: yes
+        baseDirectory: .next
+      cache:
+        paths:
+          - node_modules/**/*
+          - .next/cache/**/*
+          - ../../node_modules/**/*
