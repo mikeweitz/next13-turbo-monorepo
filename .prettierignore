@@ -1,0 +1,5 @@
+# Ignore all YAML file
+*.yml
+tsconfig.json
+**/*/tsconfig.json
+*.md
